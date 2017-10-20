@@ -9,6 +9,7 @@ $(document).ready(function(){
 		var currentStreamField = allStreamFields[i];
 		//Current Field header
 		var header = $(currentStreamField).children('h2')[0];
+		if (!header) continue;
 		//Search for the input field so that we can get is id to know the field's name.
 		var streamFieldDiv = $(currentStreamField).find('div.sequence-container.sequence-type-stream')[0];
 		var fieldInfos = $(streamFieldDiv).children('input')[0].id.split('-')[0];
